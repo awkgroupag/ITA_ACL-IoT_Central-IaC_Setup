@@ -25,8 +25,9 @@ resource "azurerm_iotcentral_application" "iotCentral" {
   name                = "cloud-iot-central-tf"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
- 
-  display_name = "iot-application-terraform"
+  sub_domain          = "dabc"
+
+  display_name = "iot-application"
   sku          = "ST2"
   template = "32a80a53-a875-4ffc-b64a-590557aef153"
 } 
