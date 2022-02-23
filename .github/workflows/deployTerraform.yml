@@ -15,6 +15,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDS_TERRAFORM }}
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
+      - name: Change Working Dir  
         run: cd Terraform
       - name: Terraform Init
         run: terraform init
