@@ -1,0 +1,20 @@
+name: deploy-bicep
+
+on: [workflow_dispatch]
+
+env:
+    AZURE_RESOURCEGROUP_NAME: rg-euwe-di-iotiac
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDS_BICEP }}
+      - uses: azure/arm-deploy@v1
+        with:
+          deploymentName: ${{ github.run_number }}
+          resourceGroupName: ${{ env.AZURE_RESOURCEGROUP_NAME }}
+          template: ./Bicep/iotCentral.bicep
