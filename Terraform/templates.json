@@ -1,0 +1,110 @@
+{
+    "@id": "dtmi:mymodeltemplate:awk",
+    "@type": [
+      "ModelDefinition",
+      "DeviceModel"
+    ],
+    "capabilityModel": {
+      "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx;1",
+      "@type": "Interface",
+      "contents": [
+        {
+          "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:CO2;1",
+          "@type": "Telemetry",
+          "displayName": "CO2",
+          "displayUnit": "ppm",
+          "name": "CO2",
+          "schema": "float"
+        },
+        {
+          "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Temperature;1",
+          "@type": [
+            "Telemetry",
+            "Temperature"
+          ],
+          "displayName": "Temperature",
+          "name": "Temperature",
+          "schema": "float",
+          "unit": "degreeCelsius"
+        },
+        {
+          "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Humidity;1",
+          "@type": [
+            "Telemetry",
+            "Humidity"
+          ],
+          "displayName": "Humidity",
+          "name": "Humidity",
+          "schema": "float"
+        },
+        {
+          "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Lux;1",
+          "@type": [
+            "Telemetry",
+            "Luminosity"
+          ],
+          "displayName": "Light",
+          "name": "Lux",
+          "schema": "double"
+        },
+        {
+          "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Infrared;1",
+          "@type": [
+            "Telemetry",
+            "Illuminance"
+          ],
+          "displayName": "Infrared",
+          "name": "Infrared",
+          "schema": "double"
+        },
+        {
+          "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Broadband;1",
+          "@type": [
+            "Telemetry",
+            "Illuminance"
+          ],
+          "displayName": "Broadband",
+          "name": "Broadband",
+          "schema": "double"
+        },
+        {
+          "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Distance;1",
+          "@type": [
+            "Telemetry",
+            "Distance"
+          ],
+          "displayName": "Distance",
+          "name": "Distance",
+          "schema": "float"
+        },
+        {
+          "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Occupancy;1",
+          "@type": "Telemetry",
+          "displayName": "Occupancy",
+          "name": "Occupancy",
+          "schema": "double"
+        },
+        {
+          "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Test;1",
+          "@type": "Telemetry",
+          "displayName": "Test",
+          "name": "Test",
+          "schema": "double"
+        },
+        {
+          "@id": "dtmi:solutionModel:modelDefinition:fjng88iv:l9f1lubph:Location;1",
+          "@type": [
+            "Property",
+            "Cloud",
+            "StringValue"
+          ],
+          "displayName": "Location",
+          "name": "Location",
+          "schema": "string"
+        }
+      ],
+      "displayName": "AWK PoC Template"
+    },
+    "displayName": "AWK PoC Template",
+    "etag": "\"~MQ1zGBtmGZ6SC5imDCaP5w96cFQjnV24HZavB/QbeoY=\""
+  }
