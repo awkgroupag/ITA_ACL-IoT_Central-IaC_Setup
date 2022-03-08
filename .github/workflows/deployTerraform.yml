@@ -2,24 +2,39 @@ name: deploy-terraform
 
 on: [workflow_dispatch]
 
+
+
 env:
-    AZURE_RESOURCEGROUP_NAME: rg-euwe-di-iotiac
+  ARM_CLIENT_ID: ${{ secrets.clientId }}
+  ARM_CLIENT_SECRET: ${{ secrets.clientSecret }}
+  ARM_TENANT_ID: ${{ secrets.tenantId }}
+  ARM_SUBSCRIPTION_ID: ${{ secrets.subscriptionId }}
+  RESOURCE_GROUP: 'rg-euwe-di-iotiac'
+  STORAGE_ACCOUNT: 'tfstate1a2b341'
+  CONTAINER_NAME: 'tfstate'
 
 jobs:
   deploy:
+    name: 'Terraform'
     runs-on: ubuntu-latest
+    defaults: 
+      run: 
+        shell: bash
+        working-directory: ./main/Terraform
     steps:
       - uses: actions/checkout@v2
-      - uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDS_TERRAFORM }}
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
-      - name: Change Working Dir  
-        run: cd Terraform
       - name: Terraform Init
-        run: terraform init
+          id: init
+        run: terraform init -backend-config="storage_account_name=$STORAGE_ACCOUNT" -backend-config="container_name=$CONTAINER_NAME" -backend-config="resource_group_name=$RESOURCE_GROUP"
+      - name: Terraform Plan
+          id: plan
+        run: terraform plan
       - name: Terraform Apply
-        run: terraform apply 
+          run: terraform apply  
+            
+
+
 
      
