@@ -5,10 +5,10 @@ on: [workflow_dispatch]
 
 
 env:
-  ARM_CLIENT_ID: ${{ secrets.clientId }}
-  ARM_CLIENT_SECRET: ${{ secrets.clientSecret }}
-  ARM_TENANT_ID: ${{ secrets.tenantId }}
-  ARM_SUBSCRIPTION_ID: ${{ secrets.subscriptionId }}
+  ARM_CLIENT_ID: ${{ secrets.TF_CLIENT_ID }}
+  ARM_CLIENT_SECRET: ${{ secrets.TF_CLIENT_SECRET }}
+  ARM_TENANT_ID: ${{ secrets.TF_TENANT_ID }}
+  ARM_SUBSCRIPTION_ID: ${{ secrets.TF_SUBSCRIPTION_ID }}
   RESOURCE_GROUP: 'rg-euwe-di-iotiac'
   STORAGE_ACCOUNT: 'tfstate1a2b341'
   CONTAINER_NAME: 'tfstate'
