@@ -1,4 +1,4 @@
-name: deploy-terraform
+name: terraform-apply
 
 on: [workflow_dispatch]
 
@@ -27,10 +27,8 @@ jobs:
         uses: hashicorp/setup-terraform@v1
       - name: Terraform Init
         run: terraform init -backend-config="storage_account_name=$STORAGE_ACCOUNT" -backend-config="container_name=$CONTAINER_NAME" -backend-config="resource_group_name=$RESOURCE_GROUP"
-      - name: Terraform Plan
-        run: terraform plan
       - name: Terraform Apply
-        run: terraform apply  
+        run: terraform apply -auto-approve
             
 
 

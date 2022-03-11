@@ -1,0 +1,36 @@
+name: terraform-plan
+
+on: [workflow_dispatch]
+
+
+
+env:
+  ARM_CLIENT_ID: ${{ secrets.TF_CLIENT_ID }}
+  ARM_CLIENT_SECRET: ${{ secrets.TF_CLIENT_SECRET }}
+  ARM_TENANT_ID: ${{ secrets.TF_TENANT_ID }}
+  ARM_SUBSCRIPTION_ID: ${{ secrets.TF_SUBSCRIPTION_ID }}
+  RESOURCE_GROUP: 'rg-euwe-di-iotiac'
+  STORAGE_ACCOUNT: 'tfstate1a2b341'
+  CONTAINER_NAME: 'tfstate'
+
+jobs:
+  deploy:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+    defaults: 
+      run: 
+        shell: bash
+        working-directory: ./Terraform
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+      - name: Terraform Init
+        run: terraform init -backend-config="storage_account_name=$STORAGE_ACCOUNT" -backend-config="container_name=$CONTAINER_NAME" -backend-config="resource_group_name=$RESOURCE_GROUP"
+      - name: Terraform Plan
+        run: terraform plan
+            
+
+
+
+     
