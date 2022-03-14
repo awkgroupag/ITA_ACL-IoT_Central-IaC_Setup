@@ -1,6 +1,4 @@
-param location string = 'westeurope'
-
-
+param location string = resourceGroup().location
 
 resource iotCentral 'Microsoft.IoTCentral/iotApps@2021-06-01' = {
   name: 'cloud-iot-central-bicep'

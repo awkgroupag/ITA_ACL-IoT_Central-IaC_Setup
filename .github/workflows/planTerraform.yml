@@ -22,7 +22,8 @@ jobs:
         shell: bash
         working-directory: ./Terraform
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
       - name: Terraform Init

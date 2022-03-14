@@ -1,4 +1,4 @@
-name: deploy-bicep
+name: bicep-deploy
 
 on: [workflow_dispatch]
 
