@@ -1,0 +1,104 @@
+{
+    "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx;1",
+    "@type": "Interface",
+    "contents": [
+        {
+            "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:CO2;1",
+            "@type": "Telemetry",
+            "displayName": {
+                "en": "CO2"
+            },
+            "name": "CO2",
+            "schema": "float"
+        },
+        {
+            "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Temperature;1",
+            "@type": [
+                "Telemetry",
+                "Temperature"
+            ],
+            "displayName": {
+                "en": "Temperature"
+            },
+            "name": "Temperature",
+            "schema": "float",
+            "unit": "degreeCelsius"
+        },
+        {
+            "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Humidity;1",
+            "@type": [
+                "Telemetry",
+                "Humidity"
+            ],
+            "displayName": {
+                "en": "Humidity"
+            },
+            "name": "Humidity",
+            "schema": "float"
+        },
+        {
+            "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Lux;1",
+            "@type": [
+                "Telemetry",
+                "Luminosity"
+            ],
+            "displayName": {
+                "en": "Light"
+            },
+            "name": "Lux",
+            "schema": "double"
+        },
+        {
+            "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Infrared;1",
+            "@type": [
+                "Telemetry",
+                "Illuminance"
+            ],
+            "displayName": {
+                "en": "Infrared"
+            },
+            "name": "Infrared",
+            "schema": "double"
+        },
+        {
+            "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Broadband;1",
+            "@type": [
+                "Telemetry",
+                "Illuminance"
+            ],
+            "displayName": {
+                "en": "Broadband"
+            },
+            "name": "Broadband",
+            "schema": "double"
+        },
+        {
+            "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Distance;1",
+            "@type": [
+                "Telemetry",
+                "Distance"
+            ],
+            "displayName": {
+                "en": "Distance"
+            },
+            "name": "Distance",
+            "schema": "float"
+        },
+        {
+            "@id": "dtmi:co2SensorPocCentral:AWKPoCTemplate2fx:Occupancy;1",
+            "@type": "Telemetry",
+            "displayName": {
+                "en": "Occupancy"
+            },
+            "name": "Occupancy",
+            "schema": "double"
+        }
+    ],
+    "displayName": {
+        "en": "AWK PoC Template"
+    },
+    "@context": [
+        "dtmi:iotcentral:context;2",
+        "dtmi:dtdl:context;2"
+    ]
+}
