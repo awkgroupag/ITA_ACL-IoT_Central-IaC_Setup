@@ -1,0 +1,25 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "Audit resource location matches resource group location",
+  "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0a914e76-4921-4c19-b460-a2d36003525a",
+  "scope": "/subscriptions/9bf29025-6542-4c65-8b12-e6b6c88a87d1/resourceGroups/rg-testing-automationAccounts",
+  "notScopes": [],
+  "parameters": {},
+  "metadata": {
+   "assignedBy": "Joël Beimler",
+   "parameterScopes": {},
+   "createdBy": "abe65ee8-0b00-4790-bf50-768f8c535a57",
+   "createdOn": "2022-03-28T09:18:58.2001997Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/9bf29025-6542-4c65-8b12-e6b6c88a87d1/resourceGroups/rg-testing-automationAccounts/providers/Microsoft.Authorization/policyAssignments/25105d131bb44854b0a8c83b",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "25105d131bb44854b0a8c83b"
+}
