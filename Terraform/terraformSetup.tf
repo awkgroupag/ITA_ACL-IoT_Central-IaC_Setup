@@ -6,6 +6,8 @@ terraform {
     }
   }
 
+# A more elegant solution would be to store this data as env variables
+
   backend "azurerm" {
       resource_group_name  = "rg-euwe-di-iotiac"
       storage_account_name = "tfstate1a2b341"
