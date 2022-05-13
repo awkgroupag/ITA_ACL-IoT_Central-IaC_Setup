@@ -1,5 +1,5 @@
 # Cloud_IoT_IaC
-Here, we set up the cloud infrastructure of the Cloud IoT Lab in Bicep and Terraform. You'll have to install the Azure CLI, Bicep, and Terraform.
+Here, we set up the cloud infrastructure of the Cloud IoT Lab in Bicep and Terraform. This is now mostly intended for demo/tryout purposes. You'll have to install the Azure CLI, Bicep, and Terraform.
 
 ## Authenticating to Azure
 Currently, both scripts are intended to be deployed by a user account (as opposed to a service principal, TODO). As such, once you have cloned the repo, run `az login`, follow the instructions in your browser, and then set the active subscription using `az account set` to `subs-te-di-acl_sandbox`.
