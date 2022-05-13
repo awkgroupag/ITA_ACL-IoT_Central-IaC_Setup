@@ -19,7 +19,7 @@ az deployment group create --resource-group rg-euwe-di-iotiac --name {enter a de
 This will show you the changes that deploying the resources as specified in `iotCentral.bicep` would make to any existing resources. Remove `--what-if` if you want to deploy. You'll have to deploy iotCentral.bicep first.
 
 ### Terraform
-Terraform now uses a remote backend, storing its state data in an Azure storage account. Once you have cloned the repository, you need only cd to the Terraform subdirectory, and then initialize it using `terraform init`. You can run `terraform plan` right after to get the proposed changes, and `terraform apply` to perform thee changes.
+Terraform now uses a remote backend, storing its state data in an Azure storage account. Once you have cloned the repository, you need only cd to the Terraform subdirectory, and then initialize it using `terraform init`. You can run `terraform plan` right after to get the proposed changes, and `terraform apply` to perform the changes. Note that you don't have to specify any of the files in these commands, terraform is aware of the configuration specified in the entire directory.
 **For Role assignments:** The identity which is assigned role assignments is deployed in one of the bicep files, so you'll have to deploy these first.
 You can also download the state file from the storage account in the Azure portal (storage acc/containers/tfstate/terraform.tfstate on the side menu on the left, then click "download" in the top bar) to see what the state file looks like and why you shouldnt' put it on GitHub (there's access keys in it).
 
